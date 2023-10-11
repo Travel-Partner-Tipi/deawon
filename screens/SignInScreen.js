@@ -3,21 +3,31 @@ import InputBox from "../components/ui/InputBox";
 import SquareButton from "../components/ui/SquareButton";
 import TextButton from "../components/ui/TextButton";
 import LineDivider from "../components/ui/LineDivider";
+import * as WebBrowser from "expo-web-browser";
 
-// 노션 명령어 expo meterial icon
-const hi?=
+const SignInScreen = ({ navigation }) => {
+  function pressHandler() {
+    navigation.navigate("SignUpScreen");
+  }
 
-const SignInScreen = () => {
+  handleOpenWithWebBrowser = () => {
+    WebBrowser.openBrowserAsync("https://expo.dev");
+  };
+
+  function kakaoHandler() {}
+
   return (
     <SafeAreaView style={styles.container}>
       <View>
-        <InputBox />
-        <InputBox />
+        <InputBox text={"your@email.com"} iconName={"email-outline"} />
+        <InputBox text={"your password"} iconName={"lock-outline"} />
         <SquareButton>{"로그인"}</SquareButton>
-        <SquareButton>{"Google 계정으로 로그인"}</SquareButton>
+        <SquareButton onPress={handleOpenWithWebBrowser}>
+          {"Kakao 계정으로 로그인"}
+        </SquareButton>
         {/* <Button style={{ fontSize: 16 }} color="#5CC2D0" title={"회원 가입"} /> */}
         <LineDivider />
-        <TextButton>{"회원 가입"}</TextButton>
+        <TextButton onPress={pressHandler}>{"회원 가입"}</TextButton>
       </View>
     </SafeAreaView>
   );

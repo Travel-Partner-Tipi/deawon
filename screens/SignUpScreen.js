@@ -5,22 +5,26 @@ import TextButton from "../components/ui/TextButton";
 import LineDivider from "../components/ui/LineDivider";
 import TextBox from "../components/ui/TextBox";
 
-const SignUpScreen = () => {
+const SignUpScreen = ({ navigation }) => {
+  function pressHandler() {
+    navigation.navigate("SignInScreen");
+  }
+
   return (
     <SafeAreaView style={styles.container}>
       <View>
         <TextBox text={"EMAIL"}>
-          <InputBox />
+          <InputBox text={"your@email.com"} iconName={"email-outline"} />
         </TextBox>
         <TextBox text={"PASSWORD"}>
-          <InputBox />
+          <InputBox text={"password"} iconName={"lock-outline"} />
         </TextBox>
         <TextBox text={"PASSWORD CONFIRM"}>
-          <InputBox />
+          <InputBox text={"recheck password"} iconName={"lock-outline"} />
         </TextBox>
         <SquareButton>{"NEXT"}</SquareButton>
         <LineDivider />
-        <TextButton>{"로그인"}</TextButton>
+        <TextButton onPress={pressHandler}>{"로그인"}</TextButton>
       </View>
     </SafeAreaView>
   );

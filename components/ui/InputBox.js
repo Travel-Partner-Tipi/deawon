@@ -1,20 +1,25 @@
 import { View, TextInput, StyleSheet } from "react-native";
-
-export default function InputBox() {
+import Icon from "react-native-vector-icons/MaterialCommunityIcons";
+export default function InputBox({ text, iconName }) {
   return (
     <View style={styles.inputBox}>
-      <TextInput placeholder="your@email.com" />
+      <Icon style={styles.icon} name={iconName} size={24} color="black" />
+      <TextInput placeholder={text} />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   inputBox: {
+    flexDirection: "row",
     borderBottomWidth: 1,
     borderBottomColor: "black",
     margin: 16,
     marginHorizontal: 20,
     marginTop: 0,
-    padding: 8,
+    padding: 4,
+  },
+  icon: {
+    marginRight: 12,
   },
 });

@@ -19,8 +19,8 @@ export default function App() {
             headerShown: false,
           }}
         >
-          <Stack.Screen name="SignUpScreen" component={SignUpScreen} />
           <Stack.Screen name="SignInScreen" component={SignInScreen} />
+          <Stack.Screen name="SignUpScreen" component={SignUpScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     </>
