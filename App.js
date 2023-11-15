@@ -7,6 +7,11 @@ import SignInScreen from "./screens/SignInScreen";
 import SignUpScreen from "./screens/SignUpScreen";
 import Navigation from "./navigation/Navigation";
 
+//Notification 관련
+import NotificationDetail from "./screens/Notification/NotificationDetail";
+import NotificationDetail_selectPhoto from "./screens/Notification/NotificationDetail_selectPhoto";
+import NotificationDetail_writePosting from "./screens/Notification/NotificationDetail_writePosting";
+
 const Stack = createNativeStackNavigator();
 
 export default function App() {
@@ -27,6 +32,18 @@ export default function App() {
           />
           <Stack.Screen name="SignInScreen" component={SignInScreen} />
           <Stack.Screen name="SignUpScreen" component={SignUpScreen} />
+          <Stack.Screen
+            name="NotificationDetail"
+            component={NotificationDetail}
+          />
+          <Stack.Screen
+            name="NotificationDetail_selectPhoto"
+            component={NotificationDetail_selectPhoto}
+          />
+          <Stack.Screen
+            name="NotificationDetail_writePosting"
+            component={NotificationDetail_writePosting}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </>
