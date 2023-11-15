@@ -3,6 +3,10 @@ import { Text } from "react-native";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
 import MainScreen from "../screens/MainScreen";
+
+import NotificationScreen from "../screens/Notification/NotificationScreen";
+import PersonScreeen from "../screens/PersonScreeen";
+
 const Tab = createBottomTabNavigator();
 
 const Navigation = () => {
@@ -65,7 +69,7 @@ const Navigation = () => {
       />
       <Tab.Screen
         name="Person"
-        component={Person}
+        component={PersonScreeen}
         options={{
           title: "내정보",
           tabBarIcon: ({ color, size }) => (
@@ -81,16 +85,16 @@ function SearchScreen() {
   return <Text>검색</Text>;
 }
 
-function NotificationScreen() {
+/*function NotificationScreen() {
   return <Text>사진 추가</Text>;
-}
+}*/
 
 function MessageScreen() {
   return <Text>갤러리</Text>;
 }
 
-function Person() {
+/*function Person() {
   return <Text>사람</Text>;
-}
+}*/
 
 export default Navigation;
