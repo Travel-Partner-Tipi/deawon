@@ -1,13 +1,16 @@
 import { View, TextInput, StyleSheet } from "react-native";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
-export default function InputBox({ text, iconName }) {
+
+const InputBox = ({ text, iconName }) => {
   return (
     <View style={styles.inputBox}>
       <Icon style={styles.icon} name={iconName} size={24} color="black" />
       <TextInput placeholder={text} />
     </View>
   );
-}
+};
+
+export default InputBox;
 
 const styles = StyleSheet.create({
   inputBox: {

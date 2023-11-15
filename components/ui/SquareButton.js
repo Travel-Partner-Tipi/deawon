@@ -1,6 +1,6 @@
 import { Pressable, StyleSheet, Text, View } from "react-native";
 
-export default function SquareButton({ children, onPress }) {
+const SquareButton = ({ children, onPress }) => {
   return (
     <Pressable
       style={({ pressed }) => [styles.buttonBox, pressed && styles.pressed]}
@@ -11,7 +11,9 @@ export default function SquareButton({ children, onPress }) {
       </View>
     </Pressable>
   );
-}
+};
+
+export default SquareButton;
 
 const styles = StyleSheet.create({
   buttonBox: {

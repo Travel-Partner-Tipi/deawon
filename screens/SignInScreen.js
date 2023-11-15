@@ -3,18 +3,16 @@ import InputBox from "../components/ui/InputBox";
 import SquareButton from "../components/ui/SquareButton";
 import TextButton from "../components/ui/TextButton";
 import LineDivider from "../components/ui/LineDivider";
-import * as WebBrowser from "expo-web-browser";
+import { Linking } from "react-native";
 
 const SignInScreen = ({ navigation }) => {
   function pressHandler() {
     navigation.navigate("SignUpScreen");
   }
 
-  handleOpenWithWebBrowser = () => {
-    WebBrowser.openBrowserAsync("https://expo.dev");
+  const handleOpenWithWebBrowser = () => {
+    Linking.openURL(`https://naver.com`);
   };
-
-  function kakaoHandler() {}
 
   return (
     <SafeAreaView style={styles.container}>

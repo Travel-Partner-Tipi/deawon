@@ -1,6 +1,6 @@
 import { Pressable, StyleSheet, Text } from "react-native";
 
-export default function TextButton({ children, onPress }) {
+const TextButton = ({ children, onPress }) => {
   return (
     <Pressable
       style={({ pressed }) => pressed && styles.pressed}
@@ -9,7 +9,9 @@ export default function TextButton({ children, onPress }) {
       <Text style={styles.text}>{children}</Text>
     </Pressable>
   );
-}
+};
+
+export default TextButton;
 
 const styles = StyleSheet.create({
   text: {

@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 
-export default function LineDivider() {
+const LineDivider = () => {
   return (
     <View style={styles.container}>
       <View style={styles.line} />
@@ -9,7 +9,9 @@ export default function LineDivider() {
       <View style={styles.line} />
     </View>
   );
-}
+};
+
+export default LineDivider;
 
 const styles = StyleSheet.create({
   container: {
