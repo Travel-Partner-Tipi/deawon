@@ -5,6 +5,7 @@ import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import MainScreen from "../screens/MainScreen";
 
 import NotificationScreen from "../screens/Notification/NotificationScreen";
+import GalleryScreen from "../screens/Gallery/GalleryScreen";
 import PersonScreeen from "../screens/PersonScreeen";
 
 const Tab = createBottomTabNavigator();
@@ -59,7 +60,7 @@ const Navigation = () => {
       />
       <Tab.Screen
         name="gallery"
-        component={MessageScreen}
+        component={GalleryScreen}
         options={{
           title: "갤러리",
           tabBarIcon: ({ color, size }) => (

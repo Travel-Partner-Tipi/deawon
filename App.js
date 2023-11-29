@@ -13,6 +13,9 @@ import NotificationDetail from "./screens/Notification/NotificationDetail";
 import NotificationDetail_selectPhoto from "./screens/Notification/NotificationDetail_selectPhoto";
 import NotificationDetail_writePosting from "./screens/Notification/NotificationDetail_writePosting";
 
+//Gallery 관련
+import GalleryNewTrip from "./screens/Gallery/GalleryNewTrip";
+
 const Stack = createNativeStackNavigator();
 
 export default function App() {
@@ -27,14 +30,15 @@ export default function App() {
           }}
         >
           <Stack.Screen
-            name="ProfileSettingScreen"
-            component={ProfileSettingScreen}
-          />
-          <Stack.Screen
             name="NavigationScreen"
             component={Navigation}
             options={{ headerShown: false }}
           />
+          <Stack.Screen
+            name="ProfileSettingScreen"
+            component={ProfileSettingScreen}
+          />
+
           <Stack.Screen name="SignInScreen" component={SignInScreen} />
           <Stack.Screen name="SignUpScreen" component={SignUpScreen} />
 
@@ -50,6 +54,8 @@ export default function App() {
             name="NotificationDetail_writePosting"
             component={NotificationDetail_writePosting}
           />
+
+          <Stack.Screen name="GalleryNewTrip" component={GalleryNewTrip} />
         </Stack.Navigator>
       </NavigationContainer>
     </>

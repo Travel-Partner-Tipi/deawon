@@ -10,16 +10,19 @@ import {
 import { useRoute } from "@react-navigation/native";
 
 import BackBtn from "../../components/ui/Btn/BackBtn";
-import PhotoBtn from "../../components/ui/Btn/PhotoBtn";
+import ColorBtn from "../../components/ui/Btn/ColorBtn";
 import CheckBtn from "../../components/ui/Btn/CheckBtn";
 
 import { useNavigation } from "@react-navigation/native";
 
 import InputBox from "../../components/ui/InputBox";
 
-const NotificationDetail_writePosting = () => {
+const GalleryNewTrip = () => {
   const navigation = useNavigation();
   const route = useRoute();
+
+  function pressHandler() {}
+
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.headerContainer}>
@@ -27,7 +30,7 @@ const NotificationDetail_writePosting = () => {
           <BackBtn />
         </View>
         <View style={styles.headerTextContainer}>
-          <Text style={styles.headerTopText}>게시물 글쓰기</Text>
+          <Text style={styles.headerTopText}>새 여행 설정</Text>
         </View>
         <View style={styles.backBtnStyle}>
           <CheckBtn onPress={() => navigation.navigate("Home")} />
@@ -35,33 +38,39 @@ const NotificationDetail_writePosting = () => {
       </View>
 
       <View>
-        <Text>나의 한줄평</Text>
+        <Text>여행 이름</Text>
         <InputBox
           text={"한줄평을 적어주세요"}
-          iconName={"application-edit-outline"}
+          iconName={"tooltip-edit-outline"}
         />
-        <View style={styles.SelectGrid}>
-          <PhotoBtn
-            btnImgUrl={require("../../assets/icon.png")}
-            //앞선 Screen에서 선택한거 보여줘야함
-          />
-          <PhotoBtn
-            btnImgUrl={require("../../assets/icon.png")}
-            //앞선 Screen에서 선택한거 보여줘야함
-          />
-          <PhotoBtn
-            btnImgUrl={require("../../assets/icon.png")}
-            //앞선 Screen에서 선택한거 보여줘야함
-          />
-          <PhotoBtn
-            btnImgUrl={require("../../assets/icon.png")}
-            //앞선 Screen에서 선택한거 보여줘야함
-          />
-          <PhotoBtn
-            btnImgUrl={require("../../assets/icon.png")}
-            //앞선 Screen에서 선택한거 보여줘야함
-          />
-        </View>
+        <Text>같이가는 친구</Text>
+        <InputBox
+          text={"한줄평을 적어주세요"}
+          iconName={"account-multiple-plus"}
+        />
+        <Text>여행 지역</Text>
+        <InputBox
+          text={"한줄평을 적어주세요"}
+          iconName={"map-marker-outline"}
+        />
+        <Text>여행시작 일</Text>
+        <InputBox
+          text={"한줄평을 적어주세요"}
+          iconName={"calendar-month-outline"}
+        />
+        <Text>여행종료 일</Text>
+        <InputBox
+          text={"한줄평을 적어주세요"}
+          iconName={"calendar-month-outline"}
+        />
+        <Text>대표사진 설정</Text>
+        <ColorBtn
+          children="사진 등록"
+          onPress={pressHandler}
+          nonPressColor="#F27057"
+          pressColor="#00ff00"
+          textColor="#ffffff"
+        />
       </View>
     </SafeAreaView>
   );
@@ -113,4 +122,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default NotificationDetail_writePosting;
+export default GalleryNewTrip;

@@ -9,7 +9,7 @@ import {
 //import Colors from "../../../constants/colors";
 //import UserPost from "../../../components/ui/UserPost";
 
-import PhotoBtn from "../../components/ui/PhotoBtn";
+import PhotoBtn from "../../components/ui/Btn/PhotoBtn";
 import { useNavigation } from "@react-navigation/native";
 
 const NotificationScreen = () => {
