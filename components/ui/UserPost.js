@@ -1,4 +1,5 @@
 import { View, Text, Image, StyleSheet } from "react-native";
+
 import Colors from "../../constants/colors";
 
 const UserPost = ({ userId, userText, postImgUrl, profileImgUrl }) => {
@@ -29,6 +30,7 @@ const styles = StyleSheet.create({
   postContainer: {
     marginHorizontal: 25,
     marginBottom: 20,
+    color: Colors.black,
   },
   imageContainer: {
     borderRadius: 20,

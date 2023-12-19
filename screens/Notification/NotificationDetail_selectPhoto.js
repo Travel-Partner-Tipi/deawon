@@ -14,8 +14,6 @@ import BackBtn from "../../components/ui/Btn/BackBtn";
 import CheckBtn from "../../components/ui/Btn/CheckBtn";
 import PhotoBtn from "../../components/ui/Btn/PhotoBtn";
 
-import NotificationDetail_writePosting from "./NotificationDetail_writePosting";
-
 const NotificationDetail_selectPhoto = () => {
   const navigation = useNavigation();
   const route = useRoute();
@@ -181,7 +179,6 @@ const styles = StyleSheet.create({
     margin: 7,
   },
   scrollViewContainer: {
-    //
     height: "100%",
   },
   SelectGrid: {

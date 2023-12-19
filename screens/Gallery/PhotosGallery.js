@@ -1,11 +1,4 @@
-import {
-  Image,
-  SafeAreaView,
-  ScrollView,
-  StyleSheet,
-  Text,
-  View,
-} from "react-native";
+import { ScrollView, StyleSheet, View } from "react-native";
 
 import PhotoBtn from "../../components/ui/Btn/PhotoBtn";
 

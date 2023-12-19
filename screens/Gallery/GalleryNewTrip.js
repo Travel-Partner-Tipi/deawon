@@ -1,25 +1,16 @@
-import {
-  Image,
-  SafeAreaView,
-  ScrollView,
-  StyleSheet,
-  Text,
-  View,
-} from "react-native";
+import { SafeAreaView, StyleSheet, Text, View } from "react-native";
 
-import { useRoute } from "@react-navigation/native";
+import { useNavigation } from "@react-navigation/native";
 
 import BackBtn from "../../components/ui/Btn/BackBtn";
 import ColorBtn from "../../components/ui/Btn/ColorBtn";
 import CheckBtn from "../../components/ui/Btn/CheckBtn";
-
-import { useNavigation } from "@react-navigation/native";
-
 import InputBox from "../../components/ui/InputBox";
+
+import Colors from "../../constants/colors";
 
 const GalleryNewTrip = () => {
   const navigation = useNavigation();
-  const route = useRoute();
 
   function pressHandler() {}
 
@@ -38,39 +29,51 @@ const GalleryNewTrip = () => {
       </View>
 
       <View>
-        <Text>여행 이름</Text>
-        <InputBox
-          text={"한줄평을 적어주세요"}
-          iconName={"tooltip-edit-outline"}
-        />
-        <Text>같이가는 친구</Text>
-        <InputBox
-          text={"한줄평을 적어주세요"}
-          iconName={"account-multiple-plus"}
-        />
-        <Text>여행 지역</Text>
-        <InputBox
-          text={"한줄평을 적어주세요"}
-          iconName={"map-marker-outline"}
-        />
-        <Text>여행시작 일</Text>
-        <InputBox
-          text={"한줄평을 적어주세요"}
-          iconName={"calendar-month-outline"}
-        />
-        <Text>여행종료 일</Text>
-        <InputBox
-          text={"한줄평을 적어주세요"}
-          iconName={"calendar-month-outline"}
-        />
-        <Text>대표사진 설정</Text>
-        <ColorBtn
-          children="사진 등록"
-          onPress={pressHandler}
-          nonPressColor="#F27057"
-          pressColor="#00ff00"
-          textColor="#ffffff"
-        />
+        <View style={styles.inputStyle}>
+          <Text>여행 이름</Text>
+          <InputBox
+            text={"한줄평을 적어주세요"}
+            iconName={"tooltip-edit-outline"}
+          />
+        </View>
+        <View style={styles.inputStyle}>
+          <Text>같이가는 친구</Text>
+          <InputBox
+            text={"한줄평을 적어주세요"}
+            iconName={"account-multiple-plus"}
+          />
+        </View>
+        <View style={styles.inputStyle}>
+          <Text>여행 지역</Text>
+          <InputBox
+            text={"한줄평을 적어주세요"}
+            iconName={"map-marker-outline"}
+          />
+        </View>
+        <View style={styles.inputStyle}>
+          <Text>여행시작 일</Text>
+          <InputBox
+            text={"한줄평을 적어주세요"}
+            iconName={"calendar-month-outline"}
+          />
+        </View>
+        <View style={styles.inputStyle}>
+          <Text>여행종료 일</Text>
+          <InputBox
+            text={"한줄평을 적어주세요"}
+            iconName={"calendar-month-outline"}
+          />
+        </View>
+        <View style={styles.photoInputStyle}>
+          <Text>대표사진 설정</Text>
+          <ColorBtn
+            children="사진 등록"
+            onPress={pressHandler}
+            nonPressColor={Colors.main}
+            pressColor={Colors.main_dark}
+            textColor={Colors.white}
+          />
+        </View>
       </View>
     </SafeAreaView>
   );
@@ -81,10 +84,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "flex-start",
     backgroundColor: "white",
-  },
-  scrollViewContainer: {
-    //
-    height: "100%",
+    margin: 16,
   },
   headerContainer: {
     justifyContent: "space-between",
@@ -101,24 +101,19 @@ const styles = StyleSheet.create({
     width: 48,
     height: 48,
   },
-
   headerTopText: {
     fontWeight: "bold",
     justifyContent: "center",
     fontSize: 24,
     padding: 16,
   },
-  SelectGrid: {
-    justifyContent: "flex-start",
-    flexDirection: "row",
-    flexWrap: "wrap",
-    margin: 7,
+  inputStyle: {
+    marginVertical: 8,
   },
-  SelectGrid: {
-    justifyContent: "flex-start",
+  photoInputStyle: {
+    justifyContent: "space-between",
     flexDirection: "row",
-    flexWrap: "wrap",
-    margin: 7,
+    marginVertical: 8,
   },
 });
 

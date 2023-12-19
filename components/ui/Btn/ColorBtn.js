@@ -1,8 +1,15 @@
-import { Pressable, StyleSheet, Text, View } from "react-native";
-import { MaterialIcons } from "@expo/vector-icons";
+import { Pressable, StyleSheet, Text } from "react-native";
 
-import Colors from "../../../constants/colors";
-
+//설정한 색안에 글자가 들어있는 버튼입니다.
+/*
+<ColorBtn
+children="업로드"
+onPress={pressHandler}
+nonPressColor="#5cc2d0"
+pressColor="#00ff00"
+textColor="#ffffff"
+/> 이런식으로 사용합니다.
+*/
 const ColorBtn = ({
   children,
   onPress,
@@ -27,7 +34,7 @@ const ColorBtn = ({
         },
       ]}
     >
-      <Text style={[styles.text, { color: textColor }]}>{children}</Text>
+      <Text style={[styles.textStyle, { color: textColor }]}>{children}</Text>
     </Pressable>
   );
 };
@@ -36,7 +43,7 @@ export default ColorBtn;
 
 const styles = StyleSheet.create({
   container: {},
-  text: {
+  textStyle: {
     fontSize: 16,
     fontWeight: "700",
     fontStyle: "normal",

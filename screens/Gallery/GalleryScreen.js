@@ -10,20 +10,16 @@ import {
 import { NavigationContainer } from "@react-navigation/native";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
 import { MaterialIcons } from "@expo/vector-icons";
-import TripsGallery from "./TripsGallery";
-import PhotosGallery from "./PhotosGallery";
+import { useNavigation } from "@react-navigation/native";
 
 import PlusBtn from "../../components/ui/Btn/PlusBtn";
 import PhotoBtn from "../../components/ui/Btn/PhotoBtn";
-import IconBtn from "../../components/ui/Btn/IconBtn";
 import ColorBtn from "../../components/ui/Btn/ColorBtn";
 
-import TextButton from "../../components/ui/TextButton";
+import TripsGallery from "./TripsGallery";
+import PhotosGallery from "./PhotosGallery";
 
-import { Colors } from "react-native/Libraries/NewAppScreen";
-import { useState } from "react";
-
-import { useNavigation } from "@react-navigation/native";
+import Colors from "../../constants/colors";
 
 const GalleryScreen = () => {
   const navigation = useNavigation();
@@ -52,16 +48,16 @@ const GalleryScreen = () => {
             <ColorBtn
               children="업로드"
               onPress={pressHandler}
-              nonPressColor="#5cc2d0"
-              pressColor="#00ff00"
-              textColor="#ffffff"
+              nonPressColor={Colors.main}
+              pressColor={Colors.main_dark}
+              textColor={Colors.white}
             />
             <ColorBtn
               children="넘기기"
               onPress={pressHandler}
-              nonPressColor="#F27057"
-              pressColor="#00ff00"
-              textColor="#ffffff"
+              nonPressColor={Colors.point}
+              pressColor={Colors.point_dark}
+              textColor={Colors.white}
             />
           </View>
         </View>
@@ -77,7 +73,11 @@ const GalleryScreen = () => {
               tabBarShowLabel: false,
               tabBarIcon: ({ forcused, color }) => {
                 return (
-                  <MaterialIcons name="card-travel" size={24} color="#5cc2d0" />
+                  <MaterialIcons
+                    name="card-travel"
+                    size={24}
+                    color={Colors.main}
+                  />
                 );
               },
             }}
@@ -89,7 +89,7 @@ const GalleryScreen = () => {
               tabBarShowLabel: false,
               tabBarIcon: ({ forcused, color }) => {
                 return (
-                  <MaterialIcons name="grid-on" size={24} color="#5cc2d0" />
+                  <MaterialIcons name="grid-on" size={24} color={Colors.main} />
                 );
               },
             }}
@@ -135,7 +135,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-around",
     borderBottomWidth: 2,
-    borderBottomColor: "#5cc2d0",
+    borderBottomColor: Colors.main,
   },
   selPhotoIcon: {},
 
@@ -153,11 +153,13 @@ const styles = StyleSheet.create({
   },
   NowUploadStatus: {
     paddingHorizontal: 8,
+    margin: 8,
     justifyContent: "flex-start",
     flexDirection: "column",
   },
   BtnContainer: {
     justifyContent: "flex-start",
     flexDirection: "row",
+    margin: 8,
   },
 });
