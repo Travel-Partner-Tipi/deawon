@@ -7,8 +7,7 @@ import Colors from "../constants/colors";
 import MainScreen from "../screens/MainScreen";
 import NotificationScreen from "../screens/Notification/NotificationScreen";
 import GalleryScreen from "../screens/Gallery/GalleryScreen";
-import PersonScreeen from "../screens/PersonScreeen";
-
+import PersonScreeen from "../screens/Person/PersonScreeen";
 const Tab = createBottomTabNavigator();
 
 const Navigation = () => {

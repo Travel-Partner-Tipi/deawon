@@ -16,6 +16,9 @@ import NotificationDetail_writePosting from "./screens/Notification/Notification
 //Gallery 관련
 import GalleryNewTrip from "./screens/Gallery/GalleryNewTrip";
 
+//personScreen 관련
+import AppSettingScreen from "./screens/Person/AppSettingScreen";
+
 const Stack = createNativeStackNavigator();
 
 export default function App() {
@@ -56,6 +59,8 @@ export default function App() {
           />
 
           <Stack.Screen name="GalleryNewTrip" component={GalleryNewTrip} />
+
+          <Stack.Screen name="AppSettingScreen" component={AppSettingScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     </>

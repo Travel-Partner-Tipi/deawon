@@ -5,6 +5,8 @@ const Colors = {
   point_dark: "#D6634D",
   black: "#191919",
   white: "#ffffff",
+  gray: "#bdbdbd",
+  light_gray: "#EAEAEA",
 };
 
 export default Colors;
