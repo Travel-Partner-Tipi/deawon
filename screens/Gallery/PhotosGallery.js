@@ -7,6 +7,7 @@ const PhotosGallery = () => {
     <ScrollView style={styles.container}>
       <View>
         <View style={styles.SelectGrid}>
+          {/**포토버튼 onPress수정 */}
           <PhotoBtn
             btnImgUrl={require("../../assets/icon.png")}
             //앞선 Screen에서 선택한거 보여줘야함
