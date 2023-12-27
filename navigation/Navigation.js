@@ -2,11 +2,12 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Text } from "react-native";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
+import Colors from "../constants/colors";
+
 import MainScreen from "../screens/MainScreen";
-
 import NotificationScreen from "../screens/Notification/NotificationScreen";
-import PersonScreeen from "../screens/PersonScreeen";
-
+import GalleryScreen from "../screens/Gallery/GalleryScreen";
+import PersonScreeen from "../screens/Person/PersonScreeen";
 const Tab = createBottomTabNavigator();
 
 const Navigation = () => {
@@ -14,10 +15,10 @@ const Navigation = () => {
     <Tab.Navigator
       initialRouteName="Home"
       screenOptions={{
-        tabBarActiveTintColor: "#5cc2d0",
+        tabBarActiveTintColor: Colors.main,
         tabBarStyle: {
           height: 100,
-          shadowColor: "black",
+          shadowColor: Colors.black,
           shadowOffset: { width: 0, height: 1 },
           shadowOpacity: 0.25,
           shadowRadius: 10,
@@ -59,7 +60,7 @@ const Navigation = () => {
       />
       <Tab.Screen
         name="gallery"
-        component={MessageScreen}
+        component={GalleryScreen}
         options={{
           title: "갤러리",
           tabBarIcon: ({ color, size }) => (
@@ -85,16 +86,8 @@ function SearchScreen() {
   return <Text>검색</Text>;
 }
 
-/*function NotificationScreen() {
-  return <Text>사진 추가</Text>;
-}*/
-
 function MessageScreen() {
   return <Text>갤러리</Text>;
 }
-
-/*function Person() {
-  return <Text>사람</Text>;
-}*/
 
 export default Navigation;

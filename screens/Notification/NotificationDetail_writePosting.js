@@ -9,11 +9,12 @@ import {
 
 import { useRoute } from "@react-navigation/native";
 
-import BackBtn from "../../components/ui/BackBtn";
-import PhotoBtn from "../../components/ui/PhotoBtn";
+import BackBtn from "../../components/ui/Btn/BackBtn";
+import PhotoBtn from "../../components/ui/Btn/PhotoBtn";
+import CheckBtn from "../../components/ui/Btn/CheckBtn";
 
 import { useNavigation } from "@react-navigation/native";
-import CheckBtn from "../../components/ui/CheckBtn";
+
 import InputBox from "../../components/ui/InputBox";
 
 const NotificationDetail_writePosting = () => {

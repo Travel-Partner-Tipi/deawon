@@ -53,7 +53,7 @@ const ProfileSettingScreen = () => {
         <View style={styles.headerContainer}>
           <Text>X</Text>
           <Text style={{ fontSize: 18, fontWeight: "bold" }}>프로필 설정</Text>
-          <Text>></Text>
+          <Text>체크버튼</Text>
         </View>
         <View style={{ justifyContent: "center", alignItems: "center" }}>
           <View style={styles.userImageBox}>

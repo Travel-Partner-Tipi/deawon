@@ -1,6 +1,10 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 
+import Colors from "../../constants/colors";
+
+// -------OR---------
+
 const LineDivider = () => {
   return (
     <View style={styles.container}>
@@ -24,7 +28,7 @@ const styles = StyleSheet.create({
   line: {
     flex: 1,
     height: 1,
-    backgroundColor: "black",
+    backgroundColor: Colors.black,
     marginHorizontal: 10,
   },
   text: {

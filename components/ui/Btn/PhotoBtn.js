@@ -6,6 +6,10 @@ import {
   ImageBackground,
 } from "react-native";
 
+import Colors from "../../../constants/colors";
+
+//이미지를 배경으로 하는 버튼입니다.
+
 const PhotoBtn = ({ btnName, btnImgUrl, onPress }) => {
   return (
     <Pressable
@@ -27,18 +31,16 @@ const styles = StyleSheet.create({
   container: {
     borderRadius: 8,
     margin: 8,
-    //elevation: 2,
     width: 110,
     height: 110,
     flexDirection: "column",
   },
   buttonContent: {
-    //backgroundColor: "#0FF",
     flex: 0.2,
   },
   buttonText: {
     textAlign: "center",
-    color: "black",
+    color: Colors.black,
     fontSize: 16,
     fontWeight: "bold",
   },

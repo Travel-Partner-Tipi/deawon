@@ -6,10 +6,8 @@ import {
   Text,
   View,
 } from "react-native";
-//import Colors from "../../../constants/colors";
-//import UserPost from "../../../components/ui/UserPost";
 
-import PhotoBtn from "../../components/ui/PhotoBtn";
+import PhotoBtn from "../../components/ui/Btn/PhotoBtn";
 import { useNavigation } from "@react-navigation/native";
 
 const NotificationScreen = () => {
@@ -106,7 +104,6 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
   },
   scrollViewContainer: {
-    //
     height: "100%",
   },
   headerContainer: {

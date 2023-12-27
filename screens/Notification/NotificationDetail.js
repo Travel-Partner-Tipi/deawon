@@ -7,10 +7,10 @@ import {
   View,
 } from "react-native";
 
-import { useRoute } from "@react-navigation/native";
+import BackBtn from "../../components/ui/Btn/BackBtn";
+import PhotoBtn from "../../components/ui/Btn/PhotoBtn";
 
-import BackBtn from "../../components/ui/BackBtn";
-import PhotoBtn from "../../components/ui/PhotoBtn";
+import { useRoute } from "@react-navigation/native";
 
 import { useNavigation } from "@react-navigation/native";
 

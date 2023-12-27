@@ -10,11 +10,9 @@ import {
 import { useRoute } from "@react-navigation/native";
 import { useNavigation } from "@react-navigation/native";
 
-import BackBtn from "../../components/ui/BackBtn";
-import CheckBtn from "../../components/ui/CheckBtn";
-import PhotoBtn from "../../components/ui/PhotoBtn";
-
-import NotificationDetail_writePosting from "./NotificationDetail_writePosting";
+import BackBtn from "../../components/ui/Btn/BackBtn";
+import CheckBtn from "../../components/ui/Btn/CheckBtn";
+import PhotoBtn from "../../components/ui/Btn/PhotoBtn";
 
 const NotificationDetail_selectPhoto = () => {
   const navigation = useNavigation();
@@ -181,7 +179,6 @@ const styles = StyleSheet.create({
     margin: 7,
   },
   scrollViewContainer: {
-    //
     height: "100%",
   },
   SelectGrid: {
