@@ -3,6 +3,7 @@ import InputBox from "../components/ui/InputBox";
 import SquareButton from "../components/ui/SquareButton";
 import TextButton from "../components/ui/TextButton";
 import LineDivider from "../components/ui/LineDivider";
+import * as WebBrowser from "expo-web-browser";
 import { Linking } from "react-native";
 
 const SignInScreen = ({ navigation }) => {
@@ -11,7 +12,9 @@ const SignInScreen = ({ navigation }) => {
   }
 
   const handleOpenWithWebBrowser = () => {
-    Linking.openURL(`https://naver.com`);
+    WebBrowser.openBrowserAsync(
+      "https://kauth.kakao.com/oauth/authorize?client_id=682741f5d12d607fd2c7730bf0fa96bb&redirect_uri=http://localhost:19006/kakao/callback&response_type=code"
+    );
   };
 
   return (

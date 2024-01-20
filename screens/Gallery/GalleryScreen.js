@@ -45,20 +45,24 @@ const GalleryScreen = () => {
           <Text>업로드 중인 여행이 없습니다. </Text>
           <Text>여행을 떠나보세요</Text>
           <View style={styles.BtnContainer}>
-            <ColorBtn
-              children="업로드"
-              onPress={pressHandler}
-              nonPressColor={Colors.main}
-              pressColor={Colors.main_dark}
-              textColor={Colors.white}
-            />
-            <ColorBtn
-              children="넘기기"
-              onPress={pressHandler}
-              nonPressColor={Colors.point}
-              pressColor={Colors.point_dark}
-              textColor={Colors.white}
-            />
+            <View style={styles.UplaodBtnSt}>
+              <ColorBtn
+                children="업로드"
+                onPress={pressHandler}
+                nonPressColor={Colors.main}
+                pressColor={Colors.main_dark}
+                textColor={Colors.white}
+              />
+            </View>
+            <View style={styles.PassBtnSt}>
+              <ColorBtn
+                children="넘기기"
+                onPress={pressHandler}
+                nonPressColor={Colors.point}
+                pressColor={Colors.point_dark}
+                textColor={Colors.white}
+              />
+            </View>
           </View>
         </View>
       </View>
@@ -160,6 +164,12 @@ const styles = StyleSheet.create({
   BtnContainer: {
     justifyContent: "flex-start",
     flexDirection: "row",
-    margin: 8,
+    marginVertical: 8,
+  },
+  UplaodBtnSt: {
+    margin: 4,
+  },
+  PassBtnSt: {
+    margin: 4,
   },
 });
