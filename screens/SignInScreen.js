@@ -30,8 +30,11 @@ const SignInScreen = ({ navigation }) => {
         <InputBox text={"your@email.com"} iconName={"email-outline"} />
         <InputBox text={"your password"} iconName={"lock-outline"} />
         <SquareButton>{"로그인"}</SquareButton>
-        <SocialButton type={Kakao} />
-        <SocialButton type={Naver} />
+        <View style={styles.snsBtnSt}>
+          <SocialButton type={Kakao} />
+          <SocialButton type={Naver} />
+        </View>
+
         {/* <Button style={{ fontSize: 16 }} color="#5CC2D0" title={"회원 가입"} /> */}
         <LineDivider />
         <TextButton onPress={pressHandler}>{"회원 가입"}</TextButton>
@@ -46,5 +49,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "center",
+  },
+  snsBtnSt: {
+    alignItems: "center",
   },
 });
