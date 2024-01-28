@@ -3,6 +3,7 @@ import InputBox from "../components/ui/InputBox";
 import SquareButton from "../components/ui/SquareButton";
 import TextButton from "../components/ui/TextButton";
 import LineDivider from "../components/ui/LineDivider";
+import * as WebBrowser from "expo-web-browser";
 import { Linking } from "react-native";
 import Kakao from "../assets/snsIcon/kakao_login_large_wide.png";
 import Naver from "../assets/snsIcon/btnW_완성형.png";
