@@ -21,6 +21,9 @@ import GalleryNewTrip from "./screens/Gallery/GalleryNewTrip";
 //personScreen 관련
 import AppSettingScreen from "./screens/Person/AppSettingScreen";
 
+//kakao 로그인 관련
+import KaKaoLogin from "./screens/KaKaoLogin";
+
 const Stack = createNativeStackNavigator();
 
 export default function App() {
@@ -36,6 +39,7 @@ export default function App() {
             }}
           >
             <Stack.Screen name="SignInScreen" component={SignInScreen} />
+            <Stack.Screen name="KaKaoLogin" component={KaKaoLogin} />
             <Stack.Screen
               name="NavigationScreen"
               component={Navigation}
