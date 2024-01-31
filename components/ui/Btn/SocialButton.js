@@ -15,6 +15,7 @@ const SocialButton = ({ type, onPress }) => {
     } else if (type === 5) {
       //이유는 모르겠지만 type이 5로 잡힘
       // Naver에 대한 동작 수행
+      navigation.navigate("NaverLogin", { screen: "NaverLogin" });
       console.log("Naver button pressed");
     }
     // 전달받은 onPress 함수가 있으면 실행

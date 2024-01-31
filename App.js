@@ -40,6 +40,7 @@ export default function App() {
           >
             <Stack.Screen name="SignInScreen" component={SignInScreen} />
             <Stack.Screen name="KaKaoLogin" component={KaKaoLogin} />
+
             <Stack.Screen
               name="NavigationScreen"
               component={Navigation}
