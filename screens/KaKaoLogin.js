@@ -1,21 +1,20 @@
 import React from "react";
 import { View, StyleSheet } from "react-native";
 import { WebView } from "react-native-webview";
+import { useNavigation } from "@react-navigation/native";
 
 const REST_API_KEY = "ca2235afbfde35af42da3255c2fef3d1";
-const REDIRECT_URI = "http://127.0.0.1:19006/Home";
+const REDIRECT_URI =
+  "http://tipibackend-env.eba-nvgyp2tx.ap-northeast-2.elasticbeanstalk.com/kakao/callback";
 const INJECTED_JAVASCRIPT = `window.ReactNativeWebView.postMessage('message from webView')`;
 
 const KaKaoLogin = () => {
-  function KakaoLoginWebView(data) {
-    const exp = "code=";
-    var condition = data.indexOf(exp);
+  const navigate = useNavigation();
 
-    if (condition != -1) {
-      var authorize_code = data.substring(condition + exp.length);
-      console.log(authorize_code);
-      console.log("로그인인가");
-    }
+  function KakaoLoginWebView(redirectUri) {
+    console.log(redirectUri);
+    console.log("로그인인가");
+    //navigate.navigate("SignInScreen", { screen: "SignInScreen" });
   }
 
   return (
@@ -30,7 +29,9 @@ const KaKaoLogin = () => {
         injectedJavaScript={INJECTED_JAVASCRIPT}
         javaScriptEnabled
         onMessage={(event) => {
-          KakaoLoginWebView(event.nativeEvent["url"]);
+          const redirectUri = event.nativeEvent.url;
+          console.log("리다이렉트 URI:", redirectUri);
+          KakaoLoginWebView(redirectUri);
         }}
       />
     </View>
