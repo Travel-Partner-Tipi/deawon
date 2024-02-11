@@ -2,6 +2,7 @@ import React from "react";
 import { View, StyleSheet } from "react-native";
 import { WebView } from "react-native-webview";
 import { useNavigation } from "@react-navigation/native";
+import axios from "axios";
 
 const REST_API_KEY = "ca2235afbfde35af42da3255c2fef3d1";
 const REDIRECT_URI =
@@ -9,13 +10,7 @@ const REDIRECT_URI =
 const INJECTED_JAVASCRIPT = `window.ReactNativeWebView.postMessage('message from webView')`;
 
 const KaKaoLogin = () => {
-  const navigate = useNavigation();
-
-  function KakaoLoginWebView(redirectUri) {
-    console.log(redirectUri);
-    console.log("로그인인가");
-    //navigate.navigate("SignInScreen", { screen: "SignInScreen" });
-  }
+  const navigation = useNavigation();
 
   return (
     <View style={Styles.container}>
@@ -29,9 +24,15 @@ const KaKaoLogin = () => {
         injectedJavaScript={INJECTED_JAVASCRIPT}
         javaScriptEnabled
         onMessage={(event) => {
-          const redirectUri = event.nativeEvent.url;
-          console.log("리다이렉트 URI:", redirectUri);
-          KakaoLoginWebView(redirectUri);
+          try {
+            const redirectUri = event.nativeEvent.url;
+            console.log("리다이렉트 URI:", redirectUri);
+            const accessCode = redirectUri.split("access=")[1];
+            console.log("액세스 :", accessCode);
+            navigation.navigate("MainScreen");
+          } catch (error) {
+            console.log(error);
+          }
         }}
       />
     </View>

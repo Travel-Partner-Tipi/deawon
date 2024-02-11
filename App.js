@@ -24,6 +24,8 @@ import AppSettingScreen from "./screens/Person/AppSettingScreen";
 //kakao 로그인 관련
 import KaKaoLogin from "./screens/KaKaoLogin";
 
+import MainScreen from "./screens/MainScreen";
+
 const Stack = createNativeStackNavigator();
 
 export default function App() {
@@ -40,6 +42,7 @@ export default function App() {
           >
             <Stack.Screen name="SignInScreen" component={SignInScreen} />
             <Stack.Screen name="KaKaoLogin" component={KaKaoLogin} />
+            <Stack.Screen name="MainScreen" component={MainScreen} />
 
             <Stack.Screen
               name="NavigationScreen"
